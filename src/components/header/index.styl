@@ -1,0 +1,201 @@
+@import '../../common/stylus/mixins'
+.header
+  position relative
+  background-color rgba(7, 17, 27, 0.5)
+  overflow hidden
+  .content-wrapper
+    position relative
+    display flex
+    padding 24px 12px 18px 24px
+    color rgb(255, 255, 255)
+    .avatar
+      width 64px
+      height 64px
+      img
+        width 100%
+        height 100%
+        border-radius 4px
+    .content
+      flex 1
+      padding-top 2px
+      margin-left 16px
+      box-sizing border-box
+      .title
+        margin-bottom 8px
+        line-height 18px
+        color #fff
+        font-size 16px
+        font-weight bold
+        .brand
+          display inline-block
+          vertical-align top
+          width 30px
+          height 18px
+          bg-img('./image/brand')
+          background-size 100% 100%
+          background-repeat no-repeat
+        .name
+          margin-left 6px
+          line-height 18px
+          font-size 16px
+          font-weight bold
+      .description
+        margin-bottom: 10px
+        line-height 12px
+        font-size 12px
+        font-weight: 200;
+      .support
+        .icon
+          display inline-block
+          vertical-align top
+          width: 12px
+          height: 12px
+          margin-right 4px
+          background-size 12px 12px
+          background-repeat no-repeat
+          &.decrease
+            bg-img('./image/decrease_1')
+          &.discount
+            bg-img('./image/discount_1')
+          &.guarantee
+            bg-img('./image/guarantee_1')
+          &.invoice
+            bg-img('./image/invoice_1')
+          &.special
+            bg-img('./image/special_1')
+        .text
+          vertical-align top
+          line-height 12px
+          font-size 10px
+          font-weight: 300;
+
+    .support-count
+      position absolute
+      right 12px
+      bottom 14px
+      height 24px
+      padding 0 8px
+      box-sizing border-box
+      font-size 10px
+      line-height 24px
+      border-radius 14px
+      background-color rgba(0, 0, 0, .2)
+      text-align center
+      .count
+        font-size 10px
+        margin-right 2px
+      .icon-keyboard_arrow_right
+        line-height 24px
+        font-size 10px
+  .bulletin-wrapper
+    position relative
+    height 28px
+    line-height 28px
+    padding 0 22px 0 12px
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+    background-color rgba(7, 17, 27, 0.2)
+    color rgb(255, 255, 255)
+    .bulletin-title
+      display inline-block
+      width 22px
+      height 12px
+      margin-top 8px
+      bg-img('./image/bulletin')
+      background-size 22px 12px
+      background-repeat no-repeat
+    .bulletin-text
+      vertical-align top
+      margin 0 4px
+      font-size 10px
+    .icon-keyboard_arrow_right
+      position absolute
+      font-size 10px
+      right 12px
+      top 8px
+
+  .header-bg
+    position absolute
+    left: 0
+    top 0
+    width 100%
+    height 100%
+    z-index -1
+    filter blur(10px)
+  .detail
+    position fixed
+    left: 0
+    top: 0
+    width 100%
+    height 100%
+    background-color rgba(7, 17, 27, 0.8)
+    backdrop-filter blur(10px)
+    color #fff
+    z-index 111
+    overflow auto
+    &.fade-enter-active, &.fade-leave-active
+      transition: opacity .2s
+
+    &.fade-enter, &.fade-leave-active
+      opacity: 0
+
+    .detail-wrapper
+      width 100%
+      min-height 100%
+      .detail-main
+        margin-top 64px
+        padding-bottom 64px
+        .name
+          font-size 16px
+          font-weight 700
+          line-height 16px
+          text-align center
+        .star-wrapper
+          margin-top 18px
+          padding 2px 0
+          text-align center
+        .supports
+          width 80%
+          margin 0 auto
+          .support-item
+            padding 0 12px
+            margin-bottom 12px
+            font-size 0
+            &:last-child
+               margin-bottom 0
+            .icon
+              display inline-block
+              width: 16px
+              height: 16px
+              vertical-align top
+              background-size 16px 16px
+              background-repeat no-repeat
+              &.decrease
+                bg-img('./image/decrease_2')
+              &.discount
+                bg-img('./image/discount_2')
+              &.special
+                bg-img('./image/special_2')
+              &.invoice
+                bg-img('./image/invoice_2')
+              &.guarantee
+                bg-img('./image/guarantee_2')
+            .text
+              font-size 12px
+              line-height 16px
+              margin-left 6px
+        .bulletin
+          width 80%
+          margin 0 auto
+          .content
+            padding 0 12px
+            font-size 12px
+            line-height 24px
+    .detail-close
+      position relative
+      width 32px
+      height 32px
+      margin: -64px auto 0 auto
+      clear both
+      font-size 32px
